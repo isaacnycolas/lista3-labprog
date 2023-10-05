@@ -28,4 +28,6 @@ int main(){
     }
     float somatorio = maior + menor;
     printf("\nA soma entre o maior e o menor: %f", somatorio);
+
+    return 0;
 }
