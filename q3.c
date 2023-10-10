@@ -1,21 +1,22 @@
 #include <stdio.h>
 #include <string.h>
 
-#define TAM 30
+#define TAM 50
 
 int main() {
-    char firstName[TAM];
+   char word[TAM];
+    int count = 0;
 
-    printf("Enter your first name: ");
-    fgets(firstName, TAM, stdin);
+    printf("Digite uma palavra: ");
+    fgets(word, sizeof(word), stdin);
 
-    // Remove the newline character, if it exists
-    size_t len = strlen(firstName);
-    if (len > 0 && firstName[len - 1] == '\n') {
-        firstName[len - 1] = '\0';
+    for (int i = 0; word[i] != '\0'; i++) {
+        if (word[i] != '\n') {
+            count++;
+        }
     }
 
-    printf("Your first name is: %s\n", firstName);
+    printf("A quantidade de caracteres na string é: %d\n", count);
 
     return 0;
 }
